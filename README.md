@@ -1,13 +1,15 @@
-# DyMO: Training-Free Diffusion Model Alignment with Dynamic Multi-Objective Scheduling
+# HyperAlign: Hypernetwork for Efficient Test-Time Alignment of Diffusion Models
 
 <p>
-Text-to-image diffusion model alignment is critical for improving the alignment between the generated images and human preferences. While training-based methods are constrained by high computational costs and dataset requirements, training-free alignment methods remain underexplored and are often limited by inaccurate guidance. 
+Diffusion models achieve state-of-the-art performance but often fail to generate outputs that align with human preferences and intentions, resulting in images with poor aesthetic quality and semantic inconsistencies. Existing alignment methods present a difficult trade-off: fine-tuning approaches suffer from loss of diversity with reward over-optimization, while test-time scaling methods introduce significant computational overhead and tend to under-optimize.
 </p>
 
 <p>
-To address these limitations above, we propose a plug-and-play training-free alignment method, DyMO, for aligning the generated images and human preferences during inference. Apart from text-aware human preference scores, we introduce a semantic alignment objective for enhancing the semantic alignment in the early stages of diffusion, relying on the fact that the attention maps are effective reflections of the semantics in noisy images. We propose dynamic scheduling of multiple objectives and intermediate recurrent steps to reflect the requirements at different steps. 
+To address these limitations, we propose HyperAlign, a novel framework that trains a hypernetwork for efficient and effective test-time alignment. Instead of modifying latent states, HyperAlign dynamically generates low-rank adaptation weights to modulate the diffusion model's generation operators. This allows the denoising trajectory to be adaptively adjusted based on input latents, timesteps and prompts for reward-conditioned alignment. We introduce multiple variants of HyperAlign that differ in how frequently the hypernetwork is applied, balancing between performance and efficiency. Furthermore, we optimize the hypernetwork using a reward score objective regularized with preference data to reduce reward hacking.
 </p>
 
 <p>
-We conduct validation of the proposed DyMO with diverse pre-trained diffusion models, e.g., SD V1.5, SDXL, etc. DyMO outperforms different pre-trained baseline models and other state-of-the-art training-based and training-free methods significantly on different metrics, demonstrating effectiveness and superiority. Code and model: https://shelsin.github.io/dymo.github.io/
+We evaluate HyperAlign on multiple extended generative paradigms, including Stable Diffusion and FLUX. It significantly outperforms existing fine-tuning and test-time scaling baselines in enhancing semantic consistency and visual appeal. Code and model: https://shelsin.github.io/hyperalign.github.io/
 </p>
+
+ 
