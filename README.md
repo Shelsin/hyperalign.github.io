@@ -1,15 +1,14 @@
 # HyperAlign: Hypernetwork for Efficient Test-Time Alignment of Diffusion Models
 
 <p>
-Diffusion models achieve state-of-the-art performance but often fail to generate outputs that align with human preferences and intentions, resulting in images with poor aesthetic quality and semantic inconsistencies. Existing alignment methods present a difficult trade-off: fine-tuning approaches suffer from loss of diversity with reward over-optimization, while test-time scaling methods introduce significant computational overhead and tend to under-optimize.
+Diffusion model alignment aims to bridge the gap between generated outputs and human preferences by enhancing both semantic consistency with textual prompts and overall visual quality. Existing alignment methods face a challenging trade-off: test-time approaches enable input-specific adaptability but introduce significant computational overhead and tend to under-optimize, while fine-tuning approaches risk reward over-optimization and loss of generation diversity.
 </p>
 
 <p>
-To address these limitations, we propose HyperAlign, a novel framework that trains a hypernetwork for efficient and effective test-time alignment. Instead of modifying latent states, HyperAlign dynamically generates low-rank adaptation weights to modulate the diffusion model's generation operators. This allows the denoising trajectory to be adaptively adjusted based on input latents, timesteps and prompts for reward-conditioned alignment. We introduce multiple variants of HyperAlign that differ in how frequently the hypernetwork is applied, balancing between performance and efficiency. Furthermore, we optimize the hypernetwork using a reward score objective regularized with preference data to reduce reward hacking.
+To bridge this gap, we propose HyperAlign, a framework that trains a hypernetwork for efficient and effective test-time alignment. Instead of modifying latent states directly, HyperAlign dynamically generates input-and-state-conditioned low-rank adaptation weights to modulate the denoising trajectory toward target rewards. We introduce multiple HyperAlign variants of varying granularity to balance alignment quality and computational efficiency. The hypernetwork is optimized with a reward objective regularized by preference data to mitigate reward hacking.
 </p>
-
 <p>
-We evaluate HyperAlign on multiple extended generative paradigms, including Stable Diffusion and FLUX. It significantly outperforms existing fine-tuning and test-time scaling baselines in enhancing semantic consistency and visual appeal. Code and model: https://shelsin.github.io/hyperalign.github.io/
+We evaluate HyperAlign across multiple generative paradigms, including Stable Diffusion and FLUX, where it significantly outperforms existing alignment methods in semantic consistency and visual quality. Code and model: https://shelsin.github.io/hyperalign.github.io/
 </p>
 
  

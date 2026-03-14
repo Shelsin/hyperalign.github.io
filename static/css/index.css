@@ -3,6 +3,87 @@ body {
 }
 
 
+.hero-header {
+    background: linear-gradient(135deg, #e0f4ff 0%, #e8f4f8 50%, #f8f9ff 100%);
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+}
+
+.hero-header .hero-body {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.hero-title {
+    max-width: 980px;
+    margin: 0 auto 1rem auto;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.publication-authors {
+    margin-bottom: 0.5rem;
+}
+
+.publication-authors .author-block {
+    display: inline-block;
+    margin: 0 0.35rem;
+}
+
+.publication-links {
+    margin-top: 1.5rem;
+}
+
+.publication-links .link-block {
+    display: inline-block;
+    margin: 0.3rem;
+}
+
+.publication-links .button {
+    border-radius: 999px;
+    padding-left: 1.1rem;
+    padding-right: 1.1rem; }
+
+.section.section-light {background-color: #f8f9fc; padding-top: 3rem;
+    padding-bottom: 3rem;}
+
+.section {padding: 3rem 1.5rem;}
+
+.section-title {
+    display: inline-block;
+    border-bottom: 3px solid #2b7cff;
+    padding-bottom: 6px; }
+
+
+.content-image {
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: box-shadow 0.2s ease;   }
+
+.has-text-centered {text-align: center !important;}
+
+.feature-card {
+    background: #fff;
+    border-radius: 14px;
+    padding: 0rem 1.5rem;
+    height: auto;
+    margin: 0 auto;
+    width: 950px;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
+    border: 1px solid #eef1f6;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feature-icon {
+    font-size: 2.2rem;
+    margin-bottom: 0.8rem;
+    display: block;
+}
+span {
+    font-style: inherit;
+    font-weight: inherit;
+}
+
 .footer .icon-link {
     font-size: 25px;
     color: #000;
