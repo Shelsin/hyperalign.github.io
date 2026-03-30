@@ -4,7 +4,15 @@ body {
 
 
 .hero-header {
-    background: linear-gradient(135deg, #E9BEC5 0%, #FCF7F8 50%, #FEFBFC 100%);
+    /* background: linear-gradient(135deg, #E9BEC5 0%, #FCF7F8 50%, #FEFBFC 100%); */
+    background:
+            radial-gradient(ellipse 100% 80% at 0% 0%,
+                #E9BEC5 0%, transparent 55%),
+            radial-gradient(ellipse 70% 60% at 100% 100%,
+                #E2B0BE 0%, transparent 50%),
+            radial-gradient(ellipse 60% 50% at 50% 50%,
+                #F5DCE2 0%, transparent 60%),
+            #FCF7F8;
     padding-top: 3rem;
     padding-bottom: 1rem;
 }
