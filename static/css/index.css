@@ -3,6 +3,138 @@ body {
 }
 
 
+/* ── HyperAlign cards ── */
+.hyperalign-cards {
+    display: flex;
+    justify-content: center;
+    gap: 66px;
+    flex-wrap: wrap;
+}
+
+.ha-card {
+    width: 260px;
+    border-radius: 10px;
+    border: 1.5px solid var(--ha-border);
+    background: #fff;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .06);
+}
+
+.ha-header {
+    background: var(--ha-header-bg);
+    border-bottom: 1.5px solid var(--ha-border);
+    padding: 14px 16px 12px;
+    text-align: center;
+}
+
+.ha-title {
+    font-weight: 700;
+    font-size: .95rem;
+    color: var(--ha-text);
+}
+
+.ha-subtitle {
+    font-size: .85rem;
+    color: #555;
+    margin-top: 2px;
+}
+
+.ha-body {
+    padding: 16px 16px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 1;
+    align-items: center;
+}
+
+.ha-badge {
+    display: inline-block;
+    background: var(--ha-badge);
+    color: #fff;
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border-radius: 4px;
+}
+
+.ha-desc {
+    font-size: .85rem;
+    line-height: 1.6;
+    color: #444;
+    text-align: left;
+}
+
+.ha-tagline {
+    font-weight: 700;
+    font-size: .9rem;
+    color: var(--ha-text);
+    text-align: center;
+    margin-top: auto;
+}
+
+/* 颜色变量 — 每张卡片各自的主题色 */
+.ha-card--s {
+    --ha-border: #5ab4d6;
+    --ha-header-bg: #d6f0fa;
+    --ha-badge: #4a90c4;
+    --ha-text: #2a7ab0;
+}
+
+.ha-card--i {
+    --ha-border: #6abf69;
+    --ha-header-bg: #daf0d8;
+    --ha-badge: #2e9e5e;
+    --ha-text: #1e7a48;
+}
+
+.ha-card--p {
+    --ha-border: #e8a04a;
+    --ha-header-bg: #fdefd5;
+    --ha-badge: #c97a28;
+    --ha-text: #b06a18;
+}
+
+/* .column.has-text-centered .box-container {
+    justify-content: center;
+} */
+
+.tag-box-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.tag-box {
+    border: 2px solid #E9BEC5;
+    color: #C44F63;
+    border-radius: 15px;
+    padding: 10px 22px;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    height: 42px;
+    min-width: 280px;
+    background-color: #ffffff;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(196, 79, 99, 0.15);
+}
+
+.tag-dot {
+    width: 6px;
+    height: 6px;
+    min-width: 6px;
+    border-radius: 50%;
+    background: #C44F63;
+    flex: 0 0 auto;
+    margin: 0 12px;
+}
+
 .hero-header {
     /* background: linear-gradient(135deg, #E9BEC5 0%, #FCF7F8 50%, #FEFBFC 100%); */
     background:
@@ -160,7 +292,7 @@ span {
 }
 
 .publication-authors a {
-   color: hsl(204, 86%, 53%) !important;
+   color: #C44F63 !important;
 }
 
 .publication-authors a:hover {

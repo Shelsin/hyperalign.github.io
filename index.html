@@ -219,7 +219,7 @@
                         </div>
 
                         <div class="is-size-5 publication-authors">
-                            <span class="author-block"><sup>&#8224</sup>D. Gong is the corresponding author.</span>
+                            <span class="author-block"><sup>&#8224</sup>Corresponding author.</span>
                         </div>
 
                         <div class="column has-text-centered">
@@ -254,9 +254,20 @@
                             </div>
                         </div>
 
-                        <img src="./static/assets/method/concept.png" style="height:400px; width:600px">
-
+                        <img src="./static/assets/method/concept.png" style="height:500px; width:720px">
+                        <!-- <br>
+                        <br>
+                        <div class="tag-box-container">
+                            <div class="tag-box">Test-time Compute Amortization</div>
+                            <div class="tag-dot"></div>
+                            <div class="tag-box">Input-specific LoRA Generation</div>
+                            <div class="tag-dot"></div>
+                            <div class="tag-box">Dynamic Trajectory Adjustment</div>                  
+                        </div>
+                        <br> -->
                     </div>
+
+                    
                 </div>
             </div>
     </section>
@@ -344,6 +355,70 @@
             produce input-specific adjustments.
         </p>
     </div>
+
+    <br>
+    
+    <div style="text-align:center">
+        <h2 class="title is-5 section-title">Different Variants</h2>
+        <br>
+        <div class="hyperalign-cards">
+    
+            <!-- S -->
+            <div class="ha-card ha-card--s">
+                <div class="ha-header">
+                    <div class="ha-title">HyperAlign-S</div>
+                    <div class="ha-subtitle">(Step-wise)</div>
+                </div>
+                <div class="ha-body">
+                    <span class="ha-badge">Best Quality</span>
+                    <p class="ha-desc">
+                        <strong>Generate</strong> fresh LoRA weights <strong>at every denoising step.</strong>
+                    </p>
+                    <div class="ha-tagline">Highest alignment</div>
+                </div>
+            </div>
+    
+            <!-- I -->
+            <div class="ha-card ha-card--i">
+                <div class="ha-header">
+                    <div class="ha-title">HyperAlign-I</div>
+                    <div class="ha-subtitle">(Initial)</div>
+                </div>
+                <div class="ha-body">
+                    <span class="ha-badge">Fastest</span>
+                    <p class="ha-desc">
+                        <strong>Generate</strong> LoRA weights <strong>once at the start of denoising.</strong>
+                        Reuse identical weights for all \( T \) steps.
+                    </p>
+                    <div class="ha-tagline">Minimal overhead</div>
+                </div>
+            </div>
+    
+            <!-- P -->
+            <div class="ha-card ha-card--p">
+                <div class="ha-header">
+                    <div class="ha-title">HyperAlign-P</div>
+                    <div class="ha-subtitle">(Piece-wise)</div>
+                </div>
+                <div class="ha-body">
+                    <span class="ha-badge">Balanced</span>
+                    <p class="ha-desc">
+                        <u>Different stages</u> have varying denoising behaviors.<br>
+                        <strong>Regenerate LoRA weights only at several key timesteps.</strong>
+                    </p>
+                    <div class="ha-tagline">Efficiency–Performance trade-off</div>
+                </div>
+            </div>
+    
+        </div>
+
+        <p style="max-width:900px;margin:15px auto;text-align:center;">
+            Our hypernetwork is trained end-to-end by backpropagating supervision signals directly through the frozen pre-trained
+            model and dynamically on-the-fly generated LoRA weights, requiring no pre-trained LoRA targets as supervision.
+        </p>
+
+    </div>
+        
     </section>
 
     <br>
@@ -411,7 +486,7 @@
                     <div class="feature-card">
                         <br>
                         <img src="./static/assets/results/user_study_compare_hps.png"
-                            style="width:70%; display:block; margin:0 auto;">
+                            style="width:65%; display:block; margin:0 auto;">
                         <p style="max-width:900px;margin:15px auto;text-align:center;">
                             User study results.
                         </p>
@@ -420,7 +495,7 @@
                     <br>
                     <div class="feature-card">
                         <br>
-                        <img src="./static/assets/results/SD_metrics.png" style="width:70%; display:block; margin:0 auto;">
+                        <img src="./static/assets/results/SD_metrics.png" style="width:55%; display:block; margin:0 auto;">
                         <p style="max-width:900px;margin:15px auto;text-align:center;">
                             Comparison of AI feedback on SD V1.5-based methods.
                         </p>
@@ -430,7 +505,7 @@
                     <div class="feature-card">
                         <br>
                         <img src="./static/assets/results/FLUX_metrics.png"
-                            style="width:70%; display:block; margin:0 auto;">
+                            style="width:55%; display:block; margin:0 auto;">
                         <p style="max-width:900px;margin:15px auto;text-align:center;">
                             Comparison of AI feedback on FLUX-based methods.
                         </p>
